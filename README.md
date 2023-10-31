@@ -1,16 +1,16 @@
-**This is an operation research project, based on the following work:**
+# This is an operation research project, based on the following work:\
 Supply Chain Network Simulation by R. Borela, F. Liu, S. Hanumasagar, N. Roy (April, 2018)
 
 
-## origin scripts
-# Files:
+# origin scripts
+## Files:
 application.py	        application program for executing simulation, handlers for sales and logistics
 topology.py    		generates network of stores, plants, warehouses and truck delivery
 post_process.py	        miscellaneous functions for plotting
 visualization.py        module for interactive data visualization (not tested on DeepThought) 
 store_info.cvs          contains input for topology generation
 
-# To run the program:
+## To run the program:
 - place the store_info.cvs file in the same folder as the topology.py and application.py files
 - load python 2.7 and external libraries (matplotlib, numpy, networkx, scipy)
 - run the command to execute:
