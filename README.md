@@ -1,4 +1,4 @@
-# This is an operation research project, based on the following work:\
+# This is an operation research project, based on the following work:
 Supply Chain Network Simulation by R. Borela, F. Liu, S. Hanumasagar, N. Roy (April, 2018)
 
 
