@@ -167,18 +167,18 @@ def study_min_percent():
 
 
 # ============================================ study trucks =====================================
-# for min_percent in [0.2, 0.5, 0.8]:
-#     baseline = case(n_trucks,interval,base_cost,cost_per_mile,max_stores,min_percent,'baseline')
-#     study_trucks()
-#     # get image
-#     png_files = [file for file in os.listdir('.') if file.endswith('.png')]
+for min_percent in [0.2, 0.5, 0.8]:
+    baseline = case(n_trucks,interval,base_cost,cost_per_mile,max_stores,min_percent,'baseline')
+    study_trucks()
+    # get image
+    png_files = [file for file in os.listdir('.') if file.endswith('.png')]
     
-#     # create dictory
-#     os.makedirs('./figure/study_trucks_minp_is_{:.1f}'.format(min_percent), exist_ok=True)
+    # create dictory
+    os.makedirs('./figure/study_trucks_minp_is_{:.1f}'.format(min_percent), exist_ok=True)
     
-#     # move images to dic
-#     for file in png_files:
-#         shutil.move(file, './figure/study_trucks_minp_is_{:.1f}/'.format(min_percent) + file)
+    # move images to dic
+    for file in png_files:
+        shutil.move(file, './figure/study_trucks_minp_is_{:.1f}/'.format(min_percent) + file)
 # ============================================ study trucks =====================================
 
 
@@ -186,16 +186,16 @@ def study_min_percent():
 
 
 # ======================================== study minmum percent ================================
-for n_trucks in [1, 5, 9]:
-    baseline = case(n_trucks,interval,base_cost,cost_per_mile,max_stores,min_percent,'baseline')
-    study_min_percent()
-    # get image
-    png_files = [file for file in os.listdir('.') if file.endswith('.png')]
+# for n_trucks in [1, 5, 9]:
+#     baseline = case(n_trucks,interval,base_cost,cost_per_mile,max_stores,min_percent,'baseline')
+#     study_min_percent()
+#     # get image
+#     png_files = [file for file in os.listdir('.') if file.endswith('.png')]
     
-    # create dictory
-    os.makedirs('./figure/study_minp_N_trucks_is_{}'.format(n_trucks), exist_ok=True)
+#     # create dictory
+#     os.makedirs('./figure/study_minp_N_trucks_is_{}'.format(n_trucks), exist_ok=True)
     
-    # move images to dic
-    for file in png_files:
-        shutil.move(file, './figure/study_minp_N_trucks_is_{}/'.format(n_trucks) + file)
+#     # move images to dic
+#     for file in png_files:
+#         shutil.move(file, './figure/study_minp_N_trucks_is_{}/'.format(n_trucks) + file)
 # ======================================== study minmum percent ================================
