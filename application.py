@@ -36,7 +36,9 @@ plt.ioff()
 # generate demand drawn from modelled exponential probability distribution for each store
 def generate_demand(store):
     # np.random.seed(0)
-    demand = .5*np.ceil(np.random.exponential(1./(store.exp_sale), None))
+    demand = .4*np.ceil(np.random.exponential(1./(store.exp_sale), None))
+    while demand > store.capacity:
+        demand = .4*np.ceil(np.random.exponential(1./(store.exp_sale), None))
     return(demand)
 
 
