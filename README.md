@@ -1,8 +1,8 @@
-# This is an operation research project, based on the following work:
+## This is an operation research project, based on the following work:
 Supply Chain Network Simulation by R. Borela, F. Liu, S. Hanumasagar, N. Roy (April, 2018)
 
 
-# origin scripts
+
 ## Files:
 application.py	        application program for executing simulation, handlers for sales and logistics
 topology.py    		generates network of stores, plants, warehouses and truck delivery
