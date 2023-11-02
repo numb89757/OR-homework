@@ -58,10 +58,10 @@ baseline = case(n_trucks,interval,base_cost,cost_per_mile,max_stores,min_percent
 
 start = time.time()
 sim=simulation(baseline)
-sim.advance_time(90)
+sim.advance_time(360)
 end = time.time()
 
-print 'simulation took:',end-start
+# print 'simulation took:',end-start
 
 #==================
 # NUMBER OF TRUCKS
@@ -80,7 +80,7 @@ def study_trucks():
     # loop over cases
     for n_t in n_truck_cases:
         # execute the sim case
-        n_t.advance_time(90)
+        n_t.advance_time(360)
     
     # get useful information for plotting
     cum_revenue = [sim.cum_revenue for sim in n_truck_cases]
@@ -113,7 +113,7 @@ def study_maxstores():
     # loop over cases
     for n_ms in n_maxstore_cases:
         # execute the sim case
-        n_ms.advance_time(90)
+        n_ms.advance_time(360)
     
     # get useful information for plotting
     cum_revenue = [sim.cum_revenue for sim in n_maxstore_cases]
@@ -147,7 +147,7 @@ def study_min_percent():
     # loop over cases
     for min_p in min_percent_cases:
         # execute the sim case
-        min_p.advance_time(90)
+        min_p.advance_time(360)
 
     # get useful information for plotting
     cum_revenue = [sim.cum_revenue for sim in min_percent_cases]
@@ -163,3 +163,5 @@ def study_min_percent():
     min_percent_profit_fig = plot_study_profit('min percent', np.linspace(0,.9,10), cum_profit)
     min_percent_finances_fig.savefig('study_min_percent_finances.png')
     min_percent_profit_fig.savefig('study_min_percent_profit.png')
+
+study_min_percent()

@@ -35,7 +35,7 @@ plt.ioff()
 
 # generate demand drawn from modelled exponential probability distribution for each store
 def generate_demand(store):
-    np.random.seed(0)
+    # np.random.seed(0)
     demand = .5*np.ceil(np.random.exponential(1./(store.exp_sale), None))
     return(demand)
 
@@ -198,7 +198,7 @@ class simulation:
         day_store_deliveries = s_del
         day_deliveries = w_del + s_del
         day_mileage = w_miles + s_miles
-        day_delivery_cost = w_del_cost + s_del_cost
+        day_delivery_cost += w_del_cost + s_del_cost
         return(day_deliveries, day_warehouse_deliveries, day_store_deliveries,
                day_mileage, day_delivery_cost)
 
