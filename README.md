@@ -12,7 +12,7 @@ store_info.cvs          contains input for topology generation
 
 ## To run the program:
 - place the store_info.cvs file in the same folder as the topology.py and application.py files
-- load python 2.7 and external libraries (matplotlib, numpy, networkx, scipy)
+- load python 3.8 and external libraries (matplotlib, numpy, networkx, scipy)
 - run the command to execute:
     python parameter_study.py
   this will run the application simulation with the baseline case for 90 days

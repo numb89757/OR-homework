@@ -20,7 +20,8 @@ COLLABORATORS
 
 import numpy as np
 from application import *
-
+import os
+import shutil
 #===================
 # DEFINE CASE CLASS
 
@@ -38,7 +39,7 @@ class case:
 # BASELINE
 
 # number of trucks
-n_trucks = 4
+n_trucks = 4  #default = 4
 # number of days between deliveries
 interval = 1
 # truck daily base cost
@@ -48,7 +49,7 @@ cost_per_mile = 10
 # maximum number of stores a truck can visit
 max_stores = 3
 # min percentage of stock before issuing warning
-min_percent = .8
+min_percent = .8  #default = .8
 
 # create baseline case
 baseline = case(n_trucks,interval,base_cost,cost_per_mile,max_stores,min_percent,'baseline')
@@ -61,7 +62,7 @@ sim=simulation(baseline)
 sim.advance_time(360)
 end = time.time()
 
-# print 'simulation took:',end-start
+print('simulation took:',end-start)
 
 #==================
 # NUMBER OF TRUCKS
@@ -164,4 +165,37 @@ def study_min_percent():
     min_percent_finances_fig.savefig('study_min_percent_finances.png')
     min_percent_profit_fig.savefig('study_min_percent_profit.png')
 
-study_min_percent()
+
+# ============================================ study trucks =====================================
+for min_percent in [0.2, 0.5, 0.8]:
+    baseline = case(n_trucks,interval,base_cost,cost_per_mile,max_stores,min_percent,'baseline')
+    study_trucks()
+    # get image
+    png_files = [file for file in os.listdir('.') if file.endswith('.png')]
+    
+    # create dictory
+    os.makedirs('./figure/study_trucks_minp_is_{:.1f}'.format(min_percent), exist_ok=True)
+    
+    # move images to dic
+    for file in png_files:
+        shutil.move(file, './figure/study_trucks_minp_is_{:.1f}/'.format(min_percent) + file)
+# ============================================ study trucks =====================================
+
+
+
+
+
+# ======================================== study minmum percent ================================
+# for n_trucks in [1, 5, 9]:
+#     baseline = case(n_trucks,interval,base_cost,cost_per_mile,max_stores,min_percent,'baseline')
+#     study_min_percent()
+#     # get image
+#     png_files = [file for file in os.listdir('.') if file.endswith('.png')]
+    
+#     # create dictory
+#     os.makedirs('./figure/study_minp_N_trucks_is_{}'.format(n_trucks), exist_ok=True)
+    
+#     # move images to dic
+#     for file in png_files:
+#         shutil.move(file, './figure/study_minp_N_trucks_is_{}/'.format(n_trucks) + file)
+# ======================================== study minmum percent ================================
