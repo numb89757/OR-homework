@@ -24,11 +24,15 @@ COLLABORATORS
 
 
 #import modules
-import sys, os
+import os
 from math import *
 import numpy as np
 import networkx as nx
 import matplotlib.pyplot as plt
+import parameters
+
+# 在这里可以使用 parameters.param_lambda
+# ...
 
 #===========
 # I/O PATHS
@@ -143,7 +147,7 @@ store_info = np.loadtxt(os.path.join(input_path,'store_info.csv'),delimiter=",",
 
 # stores
 S=[]
-
+print('this lambda is ', parameters.param_lambda)
 for index in range(np.shape(store_info)[0]):#range(0,10):
     S.append(store('S'+str(int(store_info[index,0])),
              store_info[index,1],
@@ -151,7 +155,7 @@ for index in range(np.shape(store_info)[0]):#range(0,10):
              int(store_info[index,3]), 
              int(store_info[index,3]*min_percent),
              100,
-             0.1)) # La = 0.1 -> 0.25, step=0.01
+             parameters.param_lambda)) # La = 0.1 -> 0.25, step=0.01
 
 # add all nodes to graph
 for entity in P+W+S:

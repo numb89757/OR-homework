@@ -1,0 +1,8 @@
+La:0.1 best_truck:7 best_min_percent:0.9 best_profit:1980120.0 best_revenue:2535740.0 best_opp_cost:394220.0 best_delivery:555620.0
+La:0.11 best_truck:5 best_min_percent:0.9 best_profit:1883720.0 best_revenue:2269880.0 best_opp_cost:432840.0 best_delivery:386160.0
+=================================================================================================
+lambda:0.1 best_truck:1 best_min_percent:0.1 best_profit:468040.0 best_revenue:532980.0 best_opp_cost:2393860.0 best_delivery:64940.0
+lambda:0.11 best_truck:1 best_min_percent:0.1 best_profit:432720.0 best_revenue:497660.0 best_opp_cost:2200220.0 best_delivery:64940.0
+lambda:0.12 best_truck:1 best_min_percent:0.1 best_profit:409060.0 best_revenue:474380.0 best_opp_cost:2065420.0 best_delivery:65320.0
+lambda:0.13 best_truck:1 best_min_percent:0.1 best_profit:387420.0 best_revenue:452860.0 best_opp_cost:1908620.0 best_delivery:65440.0
+lambda:0.14 best_truck:1 best_min_percent:0.1 best_profit:380140.0 best_revenue:445240.0 best_opp_cost:1730120.0 best_delivery:65100.0lambda:0.15 best_truck:1 best_min_percent:0.1 best_profit:316480.0 best_revenue:381480.0 best_opp_cost:1702040.0 best_delivery:65000.0

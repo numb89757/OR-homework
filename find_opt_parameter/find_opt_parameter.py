@@ -17,13 +17,19 @@ COLLABORATORS
     F. Liu
     N. Roy 
 """
+import sys
+import parameters
 
+# 获取参数
+parameters.param_lambda = float(sys.argv[1])
 import numpy as np
 from application import *
 import os
 import shutil
 #===================
 # DEFINE CASE CLASS
+
+
 
 class case:
     def __init__(self,n_trucks,interval,base_cost,cost_per_mile,max_stores,min_percent, tag):
@@ -52,17 +58,17 @@ max_stores = 3
 min_percent = .8  #default = .8
 
 # create baseline case
-baseline = case(n_trucks,interval,base_cost,cost_per_mile,max_stores,min_percent,'baseline')
+# baseline = case(n_trucks,interval,base_cost,cost_per_mile,max_stores,min_percent,'baseline')
 
 #====================
 # EXECUTE SIMULATION
 
-start = time.time()
-sim=simulation(baseline)
-sim.advance_time(360)
-end = time.time()
+# start = time.time()
+# sim=simulation(baseline)
+# sim.advance_time(360)
+# end = time.time()
 
-print('simulation took:',end-start)
+# print('simulation took:',end-start)
 
 #==================
 # NUMBER OF TRUCKS
@@ -168,16 +174,17 @@ def study_min_percent():
 
 
 #================================= to find the optimal parameter =================================
-best_truck, best_min_percent, best_profit, best_revenue, best_opp_cost, best_delivery = 0, 0, 0, 0, 0
+best_truck, best_min_percent, best_profit, best_revenue, best_opp_cost, best_delivery = 0, 0, 0, 0, 0, 0
 opt = -10000000
-La=0.1
 for truck in range(1, 11):
-    for min_percent in range(10, 90, 5):
+    print("truck=",truck)
+    for min_percent in [10,30,50,70,90]:
+        print("min_percent=",min_percent)
         min_percent = min_percent / 100
-        base = case(truck, interval, base_cost, cost_per_mile, max_stores, min_percent, str(La))
-        sim = simulation(case)
+        base = case(truck, interval, base_cost, cost_per_mile, max_stores, min_percent, '')
+        sim = simulation(base)
         sim.advance_time(360)
-        if sim.cum_profit() > opt:
+        if sim.cum_profit > opt:
             opt = sim.cum_profit
             best_truck = truck
             best_min_percent = min_percent
@@ -186,8 +193,10 @@ for truck in range(1, 11):
             best_opp_cost = sim.cum_opp_cost
             best_delivery = sim.cum_delivery_cost
 
-print(La, best_truck, best_min_percent, best_profit, best_revenue, best_opp_cost, best_delivery)
-concat_txt = 'La:' + str(La) + ' ' + 'best_truck:' +str(best_truck)+' ' + 'best_min_percent:' +str(best_min_percent)+' ' + 'best_profit:' +str(best_profit)+' ' + 'best_revenue:' +str(best_revenue)+' ' + 'best_opp_cost:' +str(best_opp_cost)+' ' + 'best_delivery:' +str(best_delivery)
-with open("result.txt", "w") as file:
+# print(parameters.param_lambda, best_truck, best_min_percent, best_profit, best_revenue, best_opp_cost, best_delivery)
+concat_txt = 'lambda:' + str(parameters.param_lambda) + ' ' + 'best_truck:' +str(best_truck)+' ' + 'best_min_percent:' +str(best_min_percent)+' ' + 'best_profit:' +str(best_profit)+' ' + 'best_revenue:' +str(best_revenue)+' ' + 'best_opp_cost:' +str(best_opp_cost)+' ' + 'best_delivery:' +str(best_delivery)
+print(concat_txt)
+with open("result.txt", "a") as file:
     file.write(concat_txt)
+    file.write("\n")  # 添加换行符
 

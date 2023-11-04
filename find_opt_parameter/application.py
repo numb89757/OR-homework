@@ -135,29 +135,29 @@ class simulation:
         self.cum_delivery_cost = np.sum(self.daily_delivery_cost)
 
 
-        # plot costs and save output
-        daily_fig, cum_fig = plot_costs(self.daily_opp_cost, self.daily_delivery_cost)
-        daily_fig.savefig(self.tag +'_'+  self.var +'_daily_costs.png')
-        cum_fig.savefig(self.tag +'_'+  self.var +'_cum_costs.png')
+        # # plot costs and save output
+        # daily_fig, cum_fig = plot_costs(self.daily_opp_cost, self.daily_delivery_cost)
+        # daily_fig.savefig(self.tag +'_'+  self.var +'_daily_costs.png')
+        # cum_fig.savefig(self.tag +'_'+  self.var +'_cum_costs.png')
 
-        # plot revenue, total cost and profit
-        daily_fig, cum_fig = plot_finances(self.daily_revenue, self.daily_delivery_cost, self.daily_profit)
-        daily_fig.savefig(self.tag +'_'+  self.var +'_daily_finances.png')
-        cum_fig.savefig(self.tag +'_'+  self.var +'_cum_finances.png')
+        # # plot revenue, total cost and profit
+        # daily_fig, cum_fig = plot_finances(self.daily_revenue, self.daily_delivery_cost, self.daily_profit)
+        # daily_fig.savefig(self.tag +'_'+  self.var +'_daily_finances.png')
+        # cum_fig.savefig(self.tag +'_'+  self.var +'_cum_finances.png')
 
-        # plot warehouse stock
-        daily_fig, cum_fig = plot_warehouse_stock(self.daily_stock_W1, self.daily_stock_W2)
-        daily_fig.savefig(self.tag +'_'+  self.var +'_daily_warehouse_stock.png')
-        cum_fig.savefig(self.tag +'_'+  self.var +'_cum_warehouse_stock.png')
+        # # plot warehouse stock
+        # daily_fig, cum_fig = plot_warehouse_stock(self.daily_stock_W1, self.daily_stock_W2)
+        # daily_fig.savefig(self.tag +'_'+  self.var +'_daily_warehouse_stock.png')
+        # cum_fig.savefig(self.tag +'_'+  self.var +'_cum_warehouse_stock.png')
 
-        # plot deliveries
-        daily_fig, cum_fig = plot_deliveries(self.daily_warehouse_deliveries,
-                                             self.daily_store_deliveries)
-        daily_fig.savefig(self.tag +'_'+  self.var +'_daily_deliveries.png')
-        cum_fig.savefig(self.tag +'_'+ self.var +'_cum_deliveries.png')
+        # # plot deliveries
+        # daily_fig, cum_fig = plot_deliveries(self.daily_warehouse_deliveries,
+        #                                      self.daily_store_deliveries)
+        # daily_fig.savefig(self.tag +'_'+  self.var +'_daily_deliveries.png')
+        # cum_fig.savefig(self.tag +'_'+ self.var +'_cum_deliveries.png')
 
-        # close all figures
-        plt.close('all')
+        # # close all figures
+        # plt.close('all')
 
 #================
 # EVENT HANDLERS
