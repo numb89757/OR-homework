@@ -1,23 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-==============================================================================
-INTERACTIVE VISUALIZATION MODULE
-==============================================================================
-DESCRIPTION
-    This script implements tools for visualizing original data offered by 
-    competition organizing committee (Jeux Mathematiques).
-    
-CREATED
-    3/25/2018
-    last modified: 4/2/2018
-
-COLLABORATORS
-    R. Borela
-    S. Hanumasagar
-    F. Liu
-    N. Roy 
-"""
-
 # import modules
 import sys, os
 import numpy as np

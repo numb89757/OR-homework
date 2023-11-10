@@ -1,28 +1,3 @@
-"""
-==============================================================================
-NETWORK TOPOLOGY
-==============================================================================
-DESCRIPTION
-    This script defines the entities of the simulation, namely: plant, stores,
-    and warehouse. It converts the cartesian grid into a network used for optm.
-    delivery routes.
-
-CREATED
-    3/25/2018
-    last modified: 4/1/2018 (Borela)
-
-COLLABORATORS
-    R. Borela
-    S. Hanumasagar
-    F. Liu
-    N. Roy 
-"""
-
-
-# ADDED DAILY BASE COST FOR TRUCKS
-# CHANGED TRUCK ATTRIBUTES NAMES
-
-
 #import modules
 import os
 from math import *

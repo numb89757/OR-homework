@@ -1,21 +1,3 @@
-"""
-==============================================================================
-POST PROCESS
-==============================================================================
-DESCRIPTION
-    This script implements tools for post-processing simulation data.
-
-CREATED
-    4/2/2018
-    last modified: 4/2/2018
-
-COLLABORATORS
-    R. Borela
-    S. Hanumasagar
-    F. Liu
-    N. Roy 
-"""
-
 import matplotlib.pyplot as plt
 import numpy as np
 

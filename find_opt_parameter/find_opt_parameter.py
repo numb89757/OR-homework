@@ -1,22 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-==============================================================================
-PARAMETER STUDY
-==============================================================================
-DESCRIPTION
-    This script defines the simulation execution pipeline and handlers for 
-    sales and logistics operations.
-
-CREATED
-    3/25/2018
-    last modified: 4/2/2018
-
-COLLABORATORS
-    R. Borela
-    S. Hanumasagar
-    F. Liu
-    N. Roy 
-"""
 import sys
 import parameters
 
