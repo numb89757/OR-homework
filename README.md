@@ -15,7 +15,7 @@ python parameter_study.py
 ```
 In path `./OR-homework/`, run `python parameter_study.py` to study trucks and minimum safety stock percent. 
 
-When you study a parameter, please uncomment corresponding block. This part will generate some figures showing the baseline simulation result.
+When you study a parameter, please uncomment corresponding block. This part will generate some figures showing the baseline simulation result. The generated figures are stored in file `./figure/`
 
 The two blocks are written as:
 > block 1\

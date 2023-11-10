@@ -16,7 +16,7 @@ font = {'size'   : 20}
 mpl.rc('font', **font)
 
 # paths
-input_path = 'C:/Users/Rodrigo Borela/Documents/spring18/cse6730/proj2/viz_input'
+input_path = './viz_input'
 output_path = ''
 
 # load data
