@@ -6,7 +6,7 @@ authors: Yang Yuzi, Feng Jixuan, Chen Nuo from Zhejiang University.
 `topology.py`    		generates network of stores, plants, warehouses and truck delivery\
 `post_process.py`	        miscellaneous functions for plotting\
 `visualization.py`        module for interactive data visualization (not tested on DeepThought) \
-`store_info.csv`          contains input for topology generation\
+`store_info.csv`          contains input for topology generation
 
 ## To run the program
 ### part 1
