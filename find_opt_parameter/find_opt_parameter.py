@@ -176,7 +176,7 @@ def study_min_percent():
 #================================= to find the optimal parameter =================================
 best_truck, best_min_percent, best_profit, best_revenue, best_opp_cost, best_delivery = 0, 0, 0, 0, 0, 0
 opt = -10000000
-for truck in range(1, 11):
+for truck in range(1,11):
     print("truck=",truck)
     for min_percent in [10,30,50,70,90]:
         print("min_percent=",min_percent)
