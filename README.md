@@ -14,7 +14,7 @@ In path `./OR-homework/`, run `python parameter_study.py` to study trucks and mi
 
 When you study a parameter, please uncomment corresponding block. This part will generate some figures showing the baseline simulation result.
 
-the two block is written as:
+the two block are written as:
 > block 1\
 =========== study trucks ===========\
 >......\
