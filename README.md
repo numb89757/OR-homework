@@ -10,20 +10,27 @@ authors: Yang Yuzi, Feng Jixuan, Chen Nuo from Zhejiang University.
 
 ## To run the program
 ### part 1
+```
+python parameter_study.py
+```
 In path `./OR-homework/`, run `python parameter_study.py` to study trucks and minimum safety stock percent. 
 
 When you study a parameter, please uncomment corresponding block. This part will generate some figures showing the baseline simulation result.
 
-the two block are written as:
+The two blocks are written as:
 > block 1\
 =========== study trucks ===========\
 >......\
 >=========== study trucks ===========
 
->block2\
+>block 2\
 >=========== study minmum percent ===========\
 >......\
 >=========== study minmum percent ===========
 
 ### part2
+```
+cd find_opt_parameter
+python main.py
+```
 In path `./OR-homework/find_opt_parameter/`, run 'python main.py' to study parameter lambda. This part will generate the grid search result added in the file `./find_opt_parameter/result.txt`.
